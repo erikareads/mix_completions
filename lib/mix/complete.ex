@@ -3,7 +3,7 @@ defmodule Mix.Tasks.Complete do
 
   @shortdoc "Cache tab completions for mix"
   def run(_) do
-    text = elem(System.shell("mix help | tail -n +2 | grep ^mix | awk '{print $2}'"), 0)
+    text = elem(System.shell("mix help --names"), 0)
     cache_dir = case System.get_env("XDG_CACHE_HOME") do
       nil -> Path.join([System.get_env("HOME"), ".cache"])
       "" -> Path.join([System.get_env("HOME"), ".cache"])
