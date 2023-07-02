@@ -1,21 +1,37 @@
 # MixCompletions
 
-**TODO: Add description**
+Mix Task for generating shell completions for `mix`. 
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `mix_completions` to your list of dependencies in `mix.exs`:
+To install the mix task:
 
-```elixir
-def deps do
-  [
-    {:mix_completions, "~> 0.1.0"}
-  ]
-end
+```
+mix archive.install github erikareads/mix_completions tag v0.2.0
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/mix_completions>.
+To cache completions for mix:
 
+```
+mix complete
+```
+
+## Bash Completions
+
+To generate bash completions:
+
+```
+mix complete.bash
+```
+
+You'll need to source these completions, so consider writing the completions to a file.
+
+```
+mix complete.bash > .mix_completions.bash
+```
+
+The source that file in your `.bashrc`:
+
+```
+source $HOME/.mix_completions.bash
+```
