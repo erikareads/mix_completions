@@ -57,3 +57,7 @@ fpath=(~/.zsh/functions $fpath)
 autoload -Uz compinit
 compinit
 ```
+
+## Fish Completions
+
+`fish` already has completions for `mix` through community contributions: https://github.com/fish-shell/fish-shell/blob/master/share/completions/mix.fish
