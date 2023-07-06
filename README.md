@@ -7,7 +7,7 @@ Mix Task for generating shell completions for `mix`.
 To install the mix task:
 
 ```
-mix archive.install github erikareads/mix_completions tag v0.3.0
+mix archive.install hex mix_completions
 ```
 
 To cache completions for mix:

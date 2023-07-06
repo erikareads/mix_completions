@@ -7,6 +7,14 @@ defmodule MixCompletions.MixProject do
       version: "0.3.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
+      description: "Mix task for generating shell completions for mix",
+      source_url: "https://github.com/erikareads/mix_completions",
+      package: [
+        licenses: ["Apache-2.0"],
+        links: %{
+          GitHub: "https://github.com/erikareads/mix_completions"
+        }
+      ],
       deps: deps()
     ]
   end
