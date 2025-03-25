@@ -47,6 +47,7 @@ mix complete.zsh
 You'll need to save the completions as a function on the zsh `fpath`, for example:
 
 ```
+mkdir p ~/.zsh/functions
 mix complete.zsh > ~/.zsh/functions/_mix
 ```
 
