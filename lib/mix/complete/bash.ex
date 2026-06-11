@@ -123,7 +123,7 @@ defmodule Mix.Tasks.Complete.Bash do
       __mix_completion_debug "==$(date)=="
       __mix_completion_debug "cur $cur"
       __mix_completion_debug "words $words"
-      if [[ $prev == 'mix' ]]; then
+      if [[ $prev == 'mix' ]] || [[ $prev == 'help' ]]; then
         __mix_completion_handle_standard_completion_case
       else
         COMPREPLY=()
