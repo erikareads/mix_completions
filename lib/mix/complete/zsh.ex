@@ -39,7 +39,7 @@ defmodule Mix.Tasks.Complete.Zsh do
         fi
       done <<<"$filtered_options"
 
-      if [[ $previous_word == 'mix' ]]; then
+      if [[ $previous_word == 'mix' ]] || [[ $previous_word == 'help' ]]; then
         _describe "completions" completions
       else
         _arguments '*:filenames:_files'
