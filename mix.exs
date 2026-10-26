@@ -4,7 +4,7 @@ defmodule MixCompletions.MixProject do
   def project do
     [
       app: :mix_completions,
-      version: "0.3.0",
+      version: "0.4.1",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       description: "Mix task for generating shell completions for mix",
@@ -28,6 +28,8 @@ defmodule MixCompletions.MixProject do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
-    []
+    [
+      {:ex_doc, "~> 0.27", only: :dev, runtime: false}
+    ]
   end
 end
